@@ -19,3 +19,6 @@
 
 # Ignore Windows thumbnail files
 Thumbs.db
+
+# Ignore bower components folder
+/bower_components
