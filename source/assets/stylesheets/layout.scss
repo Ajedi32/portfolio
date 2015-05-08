@@ -1,0 +1,36 @@
+$header-color: #f4b400;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+core-scroll-header-panel {
+  height: 100%;
+
+  core-toolbar {
+    // TODO: Set this to transparent once you need the headerBg to be visible
+    background-color: $header-color;
+  }
+
+  &::shadow {
+    // Don't cover scrollbar
+    #headerContainer {
+      margin-right: 17px;
+    }
+
+    #condensedHeaderBg {
+      background-color: $header-color;
+    }
+
+    #headerBg {
+      // TODO: Update to an image of some kind
+      background-color: $header-color;
+    }
+  }
+}
+
+.title {
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+  font-size: 1.3333em; // Effectively shrinks to 1 on condensed bar
+}
