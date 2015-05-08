@@ -92,6 +92,8 @@ end
 
 import_bower_files '**/*.js', '**/*.css', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.html'
 
+page "assets/components/*", layout: false
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
