@@ -53,6 +53,45 @@ set :js_dir, 'assets/scripts'
 
 set :images_dir, 'assets/images'
 
+sprockets.append_path File.join(root, 'bower_components')
+
+def to_paths(object)
+  case object
+  when Hash
+    object.flat_map do |base_directory, contents|
+      to_paths(contents).map do |path|
+        File.join(base_directory.to_s, path)
+      end
+    end
+  when Array
+    object.flat_map(&method(:to_paths))
+  else
+    [object.to_s]
+  end
+end
+
+def glob_bower_file(file)
+  Dir.glob(File.join(root, 'bower_components', file)).map do |globbed_file|
+    globbed_file.gsub(/^#{Regexp.escape File.join(root, 'bower_components')}/, '')
+  end
+end
+
+def to_globbed_paths(object)
+  to_paths(object).flat_map(&method(:glob_bower_file))
+end
+
+# Accepts an array, hash, or string representing the bower component files to
+# include in the built project.
+def import_bower_files(*files)
+  to_globbed_paths(files.flatten(1)).each do |asset|
+    sprockets.import_asset asset do |base_path|
+      File.join('vendor', asset)
+    end
+  end
+end
+
+import_bower_files '**/*.js', '**/*.css', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.html'
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
