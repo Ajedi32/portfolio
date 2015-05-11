@@ -1,6 +1,4 @@
----
-title: Andrew Meyer's Portfolio
----
+- content_for(:title, "Andrew Meyer's Portfolio")
 
 %section#about-me
 	%h2 About Me
@@ -15,52 +13,10 @@ title: Andrew Meyer's Portfolio
 		business environments.
 %section#work-experience
 	%h2 Work Experience
-	%experience-card.work-experience-item{expanded: true}
-		.summary
-			Software Process Engineer at Astronautics Corporation of America
-			(April 2012 – Present)
-		%p
-			Worked to build and deploy tools and processes for increasing the
-			productivity and effectiveness of other software developers at the
-			company.
-		%details
-			%p
-				As a software engineer working on the process team at Astronautics, I
-				work to develop and deploy processes and tools to help other employees
-				at the company work more efficiently.
-			%p
-				My main project at Astronautics is developing an internal web
-				application (built with Ruby on Rails) for tracking employee training
-				records and skillsets. For about two years I was the sole developer
-				assigned to the project, while my co-workers assisted by reviewing my
-				code and providing guidance in response to any technical or
-				architectural questions I had. More recently, other members of the
-				process team have become more involved with the project, contributing
-				their own code to the development of new features.
-			%p
-				My other responsibilities at Astronautics include (but are not limited
-				to):
-			%ul
-				%li
-					Participating in code reviews of code my co-workers have written for
-					other tools
-				%li
-					Providing technical assistance to co-workers in my areas of expertise
-				%li
-					Writing documentation for internal and external tools
-				%li
-					Helping to manage deployments and backend infrastructure of existing
-					tools by creating "recipes" for the configuration management tool
-					Chef.
-	%experience-card.work-experience-item{expanded: true}
-		.summary
-			Help Desk Consultant at UW-Milwaukee University IT Services
-			(January 2011 – April 2012)
-		%p
-			Handled customer inquiries by providing technical assistance in-person
-			and over the phone, while working in a team environment.
+	- data.work_experience.each do |job|
+		= partial "work-experience-item", locals: {expanded: true}.merge(job)
 	%paper-shadow.card{z:1}
-		%a{href: "#"}
+		%a{href: url_for("/work-experience")}
 			%paper-button{role: "button"}
 				More
 				%core-icon{icon: "chevron-right"}

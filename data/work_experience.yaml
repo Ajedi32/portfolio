@@ -1,0 +1,19 @@
+- id: astronautics
+  position: Software Process Engineer
+  company: Astronautics Corporation of America
+  start_date: April 2012
+  end_date: Present
+  summary: >
+    Worked to build and deploy tools and processes for increasing the
+    productivity and effectiveness of other software developers at the
+    company.
+  desc_file: work-experience/_astronautics.md
+
+- id: help-desk
+  position: Help Desk Consultant
+  company: UW-Milwaukee University IT Services
+  start_date: January 2011
+  end_date: April 2012
+  summary: >
+    Handled customer inquiries by providing technical assistance in-person
+    and over the phone, while working in a team environment.

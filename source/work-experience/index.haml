@@ -1,0 +1,4 @@
+- content_for(:title, "Portfolio > Work Experience")
+
+- data.work_experience.each do |job|
+	= partial "work-experience-item", locals: job

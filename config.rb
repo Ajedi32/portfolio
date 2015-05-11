@@ -94,6 +94,15 @@ import_bower_files '**/*.js', '**/*.css', '**/*.png', '**/*.jpg', '**/*.jpeg', '
 
 page "assets/components/*", layout: false
 
+data.work_experience.each do |job|
+  proxy(
+    "/work-experience/#{job.id}.html",
+    "/work-experience/template.html",
+    locals: job,
+    ignore: true,
+  )
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

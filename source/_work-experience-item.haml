@@ -1,0 +1,11 @@
+%experience-card.work-experience-item{expanded: (defined?(expanded) ? expanded : false), detailsLink: (defined? desc_file and url_for("/work-experience/#{id}.html"))}
+	.summary
+		= position
+		at
+		= company
+		= surround "(", ")" do
+			= start_date
+			\-
+			= end_date
+	= Array(summary).each do |summary_paragraph|
+		%p= summary_paragraph
