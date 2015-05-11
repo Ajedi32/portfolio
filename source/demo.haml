@@ -1,0 +1,52 @@
+- content_for(:title, "Demo")
+
+This page contains a demo of some of the web libraries and technologies I'm
+currently familiar with.
+
+(Okay, honestly this is really basically just a way to satisfy all the
+assignment requirements. I couln't find a natural way to integrate stuff like
+jQuery, LetteringJS, or HTML5 audio into a website about my professional
+portfolio. Especially given that the site is already using Polymer under the
+hood.)
+
+%h2 Form
+
+Here's an example of a form!
+
+%form{method: "post"}
+  .form-item
+    %paper-input{label:"Your Name"}
+
+  .form-item
+    %label
+      T-Shirt size
+      %br
+      %paper-radio-group{:selected => "small"}
+        %paper-radio-button{:label => "Small", :name => "small"}
+        %br
+        %paper-radio-button{:label => "Medium", :name => "medium"}
+        %br
+        %paper-radio-button{:label => "Large", :name => "large"}
+
+  .form-item
+    %label
+      T-Shirt quantity
+      %br
+      %paper-slider{min: 0, max: 10, step: 1, pin: true, snaps: true}
+
+  .form-item
+    %label
+      Delivery date
+      %br
+      %input{type: "date", name: "delivery"}
+    %br
+    (No Polymer element for this yet, sadly.)
+
+  .form-item
+    %label
+      T-shirt color
+      %br
+      %input{type: "color", name: "color"}
+
+  .form-item
+    %input{type: "submit"}
