@@ -15,10 +15,27 @@
     %link{rel: 'import', href: '/vendor/paper-shadow/paper-shadow.html'}
     %link{rel: 'import', href: '/assets/components/experience-card.html'}
     %link{rel: 'import', href: '/vendor/paper-button/paper-button.html'}
+    %link{rel: 'import', href: '/vendor/paper-menu-button/paper-menu-button.html'}
+    %link{rel: 'import', href: '/vendor/paper-icon-button/paper-icon-button.html'}
+    %link{rel: 'import', href: '/vendor/paper-dropdown/paper-dropdown.html'}
+    %link{rel: 'import', href: '/vendor/core-menu/core-menu.html'}
+    %link{rel: 'import', href: '/vendor/paper-item/paper-item.html'}
   %body{class: page_classes}
     %core-scroll-header-panel{condenses: true}
       %core-toolbar#site-header{class: 'tall'}
-        %core-icon-button{icon: 'menu'}
+        %paper-menu-button
+          %paper-icon-button{icon: "menu"}
+          %paper-dropdown.dropdown
+            %core-menu.menu
+              %paper-item
+                %a{href: url_for("/")} Home
+              %paper-item
+                %a{href: url_for("/work-experience")} Work Experience
+              %paper-item
+                %a{href: url_for("/education")} Education
+              %paper-item
+                %a{href: url_for("#")} Demonstration
+        -# %core-icon-button{icon: 'menu'}
         .bottom.indent.title= yield_content(:title)
       %main
         = yield

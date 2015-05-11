@@ -29,6 +29,10 @@ core-scroll-header-panel {
   }
 }
 
+.menu paper-item > a {
+  height: auto;
+}
+
 .title {
   -webkit-transform-origin: 0;
           transform-origin: 0;
