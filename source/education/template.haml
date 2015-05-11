@@ -1,0 +1,12 @@
+- content_for(:title, "#{degree}, #{institution}")
+
+%h1
+	= succeed "," do
+		= degree
+	= institution
+	= surround "(", ")" do
+		= start_date
+		\-
+		= end_date
+- Array(summary).each do |summary_paragraph|
+	%p= summary_paragraph

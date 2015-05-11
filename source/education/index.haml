@@ -1,0 +1,4 @@
+- content_for(:title, "Portfolio > Education")
+
+- data.education.each do |degree|
+	= partial "education-item", locals: degree

@@ -22,17 +22,8 @@
 				%core-icon{icon: "chevron-right"}
 %section#education
 	%h2 Education
-	%experience-card.education-item{expanded: true}
-		.summary
-			Computer Science, University of Wisconsin - Milwaukee
-			(2011 – 2016)
-		%p
-			Currently persuing degree in Computer Science, gaining essential
-			knowledge on topics like data structures, algorithms, systems
-			programming, etc.
-		%p
-			I'm also taking electives in mobile application development (iOS and
-			Android) and web design.
+	- data.education.each do |degree|
+		= partial "education-item", locals: {expanded: true}.merge(degree)
 %section#projects
 	%h2 Publicly Visible Projects
 	%experience-card.project-item{expanded: true}
