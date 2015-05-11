@@ -24,3 +24,11 @@ body {
   display: block;
   margin: 10px;
 }
+
+.crazy-lettering > span {
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: rotate(50deg), scale(2,2);
+  }
+}
