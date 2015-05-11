@@ -1,0 +1,49 @@
+%link{href: "../../vendor/polymer/polymer.html", rel: "import"}
+%link{href: '../../vendor/paper-shadow/paper-shadow.html', rel: 'import'}
+%link{href: '../../vendor/core-collapse/core-collapse.html', rel: 'import'}
+%link{href: '../../vendor/paper-ripple/paper-ripple.html', rel: 'import'}
+%link{href: '../../vendor/core-icon/core-icon.html', rel: 'import'}
+%link{href: '../../vendor/paper-button/paper-button.html', rel: 'import'}
+
+%polymer-element{name: "experience-card", attributes: "expanded detailsLink"}
+  %template
+    :sass
+      #main
+        background-color: white
+        margin: 0
+        padding: 10px
+        box-sizing: border-box
+
+        &:hover
+          background-color: #FAFAFA
+
+        #header
+          transition: all 0.25s ease-in
+
+        &:not(.expanded)
+          #header
+            font-size: 16px
+            font-weight: normal
+            margin: 0px
+
+    %paper-shadow#main{z: 1, "on-click" => "{{toggle}}", class: '{{ {expanded: expanded} | tokenList }}'}
+      %h3#header
+        %content{select: ".summary"}
+      %paper-ripple{fit: true}
+      :plain
+        <core-collapse id="content" opened?="{{expanded}}" duration="0.25">
+      %content{select: ":not(.summary)"}
+      %template{if: "{{detailsLink}}"}
+        %a{href: "{{detailsLink}}"}
+          %paper-button{role: "button", "on-click" => "{{noPropagate}}"}
+            Details
+            %core-icon{icon: "chevron-right"}
+      :plain
+        </core-collapse>
+  :coffee
+    Polymer(
+      expanded: false
+      detailsLink: undefined
+      toggle: () -> this.expanded = !this.expanded
+      noPropagate: (e) -> e.stopPropagation()
+    )

@@ -15,8 +15,8 @@ title: Andrew Meyer's Portfolio
 		business environments.
 %section#work-experience
 	%h2 Work Experience
-	%paper-shadow.card.work-experience-item{z:1}
-		%h3
+	%experience-card.work-experience-item{expanded: true}
+		.summary
 			Software Process Engineer at Astronautics Corporation of America
 			(April 2012 – Present)
 		%p
@@ -52,19 +52,22 @@ title: Andrew Meyer's Portfolio
 					Helping to manage deployments and backend infrastructure of existing
 					tools by creating "recipes" for the configuration management tool
 					Chef.
-	%paper-shadow.card.work-experience-item{z:1}
-		%h3
+	%experience-card.work-experience-item{expanded: true}
+		.summary
 			Help Desk Consultant at UW-Milwaukee University IT Services
 			(January 2011 – April 2012)
 		%p
 			Handled customer inquiries by providing technical assistance in-person
 			and over the phone, while working in a team environment.
-	%paper-shadow.card.work-experience-item{z:1}
-		More...
+	%paper-shadow.card{z:1}
+		%a{href: "#"}
+			%paper-button{role: "button"}
+				More
+				%core-icon{icon: "chevron-right"}
 %section#education
 	%h2 Education
-	%paper-shadow.card.education-item{z:1}
-		%h3
+	%experience-card.education-item{expanded: true}
+		.summary
 			Computer Science, University of Wisconsin - Milwaukee
 			(2011 – 2016)
 		%p
@@ -76,23 +79,23 @@ title: Andrew Meyer's Portfolio
 			Android) and web design.
 %section#projects
 	%h2 Publicly Visible Projects
-	%paper-shadow.card.project-item{z:1}
-		%h3 This site!
+	%experience-card.project-item{expanded: true}
+		.summary This site!
 		%p
 			The website you are currently viewing was created entirely by me, with
 			the help of a few libraries and frameworks like jQuery and jQuery UI.
-	%paper-shadow.card.project-item{z:1}
-		%h3 html_checkers
+	%experience-card.project-item{expanded: true}
+		.summary html_checkers
 		%a{href:"https://github.com/Ajedi32/html_checkers"} View on GitHub
 		%p
 			My final project for Computer Science 113; a game of Checkers!
-	%paper-shadow.card.project-item{z:1}
-		%h3 git_aliases
+	%experience-card.project-item
+		.summary git_aliases
 		%a{href:"https://github.com/Ajedi32/git_aliases"} View on GitHub
 		%p
 			A repository of useful aliases for use with git (versions 1.7.10 and up).
-	%paper-shadow.card.project-item{z:1}
-		%h3 show_me_the_code
+	%experience-card.project-item
+		.summary show_me_the_code
 		%a{href:"https://github.com/Ajedi32/show_me_the_code"} View on GitHub
 		%p
 			A simple Chrome extension which makes it super-easy to find links to
@@ -101,240 +104,211 @@ title: Andrew Meyer's Portfolio
 	%h2 Tools and Technologies
 	%section.tool-tech-category
 		%h3 Programing, Markup, and Query Languages
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Ruby
-				%p
-					I am very familiar with Ruby as a language. I worked on a
-					production-grade Ruby on Rails application during my time at
-					Astronautics, and worked with serveral other Ruby-based frameworks
-					and tools, such as Chef, Vagrant, and Sinatra.
-				%p
-					I've also found myself using Ruby for smaller personal projects
-					and day-to-day tasks, such as batch processing and quick one-off
-					automation of repetitive tasks.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary JavaScript
-				%p
-					I've had quite a bit of experince with JavaScript, both in creating
-					the front end for the web application I helped build at Astronutics
-					and in numerous school and personal projects.
-				%p
-					I'm familiar with several JavaScript frameworks, in addition to plain
-					old vanillia js. I have yet to build any production-grade apps
-					exclusively in JavaScript, but nonetheless I believe I'm familiar
-					with the more basic concepts necessary to build such an application,
-					such as prototype-based inheritance and functional programming
-					styles.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary HTML
-				%p
-					I'm quite familiar with HTML, including the newer tags and properties
-					in HTML5, and more recently introduced concepts such as semantic
-					markup.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary CSS
-				%p
-					I'm very familiar with CSS, including newer properties and selectors
-					introduced in CSS3.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary HAML
-				%p
-					HAML is an abstraction on top of HTML that makes it easier to write
-					clean-looking markup that compiles to HTML. I'm quite familiar with
-					it, and in fact this website is coded using HAML.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary SASS
-				%p
-					SASS is an abstraction on top of CSS that makes it easier to write
-					clean, DRY stylesheets. It compiles down to regular CSS, and I
-					really enjoy working with it. I'm most familiar with the SCSS
-					variant of SASS, which is a strict superset of CSS.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary SQL
-				%p
-					I'm familiar with the basics of SQL, and can handle moderately
-					advanced stuff like JOINs with no issues.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary ECMAScript 6 (ES.next)
-				%p
-					ECMAScript 6 is, simply put, the next version of JavaScript, akin
-					to CSS3 or HTML5. I'm already fairly familiar with ECMAScript 6, and
-					have programed a few personal projects using compiler which converts
-					ECMAScript 6 to JavaScript which can run in existing browsers.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Java
-				%p
-					I'm somewhat familiar with Java, having programed a few class
-					projects using it and developed a couple Android applications.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary LUA
-				%p
-					It's been quite a while since I've programmed anything in LUA, but
-					I do have some experince with it in building games using the online
-					platform Roblox. Looking back I'm actually pretty embarased about
-					some of the terrible code I wrote back then, but I did manage to get
-					quite a following on Roblox despite that, gaining over three million
-					= succeed '.' do
-						%a{href: "http://www.roblox.com/games/2101418/ULTIMATE-Build-to-Survive"}my most popluar game
-					Actually, I think there might even be a few people who still play
-					it...
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary C/C++
-				%p
-					I have some experince with C/C++ having used it in several class
-					assignments and written a few simple programs with it when I was
-					young. These days I prefer more high-level langauges, but I know
-					enough of C/C++ to have an understanding of fundamental concepts
-					like pointers and memory allocation.
+		%experience-card.tool-tech-item
+			.summary Ruby
+			%p
+				I am very familiar with Ruby as a language. I worked on a
+				production-grade Ruby on Rails application during my time at
+				Astronautics, and worked with serveral other Ruby-based frameworks
+				and tools, such as Chef, Vagrant, and Sinatra.
+			%p
+				I've also found myself using Ruby for smaller personal projects
+				and day-to-day tasks, such as batch processing and quick one-off
+				automation of repetitive tasks.
+		%experience-card.tool-tech-item
+			.summary JavaScript
+			%p
+				I've had quite a bit of experince with JavaScript, both in creating
+				the front end for the web application I helped build at Astronutics
+				and in numerous school and personal projects.
+			%p
+				I'm familiar with several JavaScript frameworks, in addition to plain
+				old vanillia js. I have yet to build any production-grade apps
+				exclusively in JavaScript, but nonetheless I believe I'm familiar
+				with the more basic concepts necessary to build such an application,
+				such as prototype-based inheritance and functional programming
+				styles.
+		%experience-card.tool-tech-item
+			.summary HTML
+			%p
+				I'm quite familiar with HTML, including the newer tags and properties
+				in HTML5, and more recently introduced concepts such as semantic
+				markup.
+		%experience-card.tool-tech-item
+			.summary CSS
+			%p
+				I'm very familiar with CSS, including newer properties and selectors
+				introduced in CSS3.
+		%experience-card.tool-tech-item
+			.summary HAML
+			%p
+				HAML is an abstraction on top of HTML that makes it easier to write
+				clean-looking markup that compiles to HTML. I'm quite familiar with
+				it, and in fact this website is coded using HAML.
+		%experience-card.tool-tech-item
+			.summary SASS
+			%p
+				SASS is an abstraction on top of CSS that makes it easier to write
+				clean, DRY stylesheets. It compiles down to regular CSS, and I
+				really enjoy working with it. I'm most familiar with the SCSS
+				variant of SASS, which is a strict superset of CSS.
+		%experience-card.tool-tech-item
+			.summary SQL
+			%p
+				I'm familiar with the basics of SQL, and can handle moderately
+				advanced stuff like JOINs with no issues.
+		%experience-card.tool-tech-item
+			.summary ECMAScript 6 (ES.next)
+			%p
+				ECMAScript 6 is, simply put, the next version of JavaScript, akin
+				to CSS3 or HTML5. I'm already fairly familiar with ECMAScript 6, and
+				have programed a few personal projects using compiler which converts
+				ECMAScript 6 to JavaScript which can run in existing browsers.
+		%experience-card.tool-tech-item
+			.summary Java
+			%p
+				I'm somewhat familiar with Java, having programed a few class
+				projects using it and developed a couple Android applications.
+		%experience-card.tool-tech-item
+			.summary LUA
+			%p
+				It's been quite a while since I've programmed anything in LUA, but
+				I do have some experince with it in building games using the online
+				platform Roblox. Looking back I'm actually pretty embarased about
+				some of the terrible code I wrote back then, but I did manage to get
+				quite a following on Roblox despite that, gaining over three million
+				= succeed '.' do
+					%a{href: "http://www.roblox.com/games/2101418/ULTIMATE-Build-to-Survive"} my most popluar game
+				Actually, I think there might even be a few people who still play
+				it...
+		%experience-card.tool-tech-item
+			.summary C/C++
+			%p
+				I have some experince with C/C++ having used it in several class
+				assignments and written a few simple programs with it when I was
+				young. These days I prefer more high-level langauges, but I know
+				enough of C/C++ to have an understanding of fundamental concepts
+				like pointers and memory allocation.
 	%section.tool-tech-category
 		%h3 Programmer Tools
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary git
-				%p
-					I'm extremenly familiar with git, and use it as my version control
-					system of choice in all my personal, school, and work projects.
-				%p
-					I prefer working with command-line git, but don't mind using GUI
-					tools like SourceTree or Ungit either.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Atom
-				%p
-					Atom is my editor of choice at home where I have a computer that can
-					run it. At work where I'm currently stuck with a 32-bit computer,
-					I use Sublime Text (see below).
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Sublime Text
-				%p
-					I've been working with Sublime Text for quite a while now, and I
-					really enjoy having features like mutiple selections and the command
-					pallete. I really miss those features when I need to use an IDE or
-					editor which doesn't support them.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary GitLab
-				%p
-					I've worked with GitLab (an open-source GitHub clone) at Astronatics
-					for quite some time now, and I appreciate the nice interface and
-					support for issues and merge-request based code review.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary GitHub
-				%p
-					The de-facto standard for open source project hosting in my opinion.
-					I'm quite familiar with GitHub, and really appreciate having it
-					around when viewing source code, submitting patches, and discussing
-					issues involving the tools I use with the open source community.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Jenkins
-				%p
-					Jenkins is an open source continuous integration server. It's great
-					for getting fast feedback when committing changes to VCS and merging
-					branches.
+		%experience-card.tool-tech-item
+			.summary git
+			%p
+				I'm extremenly familiar with git, and use it as my version control
+				system of choice in all my personal, school, and work projects.
+			%p
+				I prefer working with command-line git, but don't mind using GUI
+				tools like SourceTree or Ungit either.
+		%experience-card.tool-tech-item
+			.summary Atom
+			%p
+				Atom is my editor of choice at home where I have a computer that can
+				run it. At work where I'm currently stuck with a 32-bit computer,
+				I use Sublime Text (see below).
+		%experience-card.tool-tech-item
+			.summary Sublime Text
+			%p
+				I've been working with Sublime Text for quite a while now, and I
+				really enjoy having features like mutiple selections and the command
+				pallete. I really miss those features when I need to use an IDE or
+				editor which doesn't support them.
+		%experience-card.tool-tech-item
+			.summary GitLab
+			%p
+				I've worked with GitLab (an open-source GitHub clone) at Astronatics
+				for quite some time now, and I appreciate the nice interface and
+				support for issues and merge-request based code review.
+		%experience-card.tool-tech-item
+			.summary GitHub
+			%p
+				The de-facto standard for open source project hosting in my opinion.
+				I'm quite familiar with GitHub, and really appreciate having it
+				around when viewing source code, submitting patches, and discussing
+				issues involving the tools I use with the open source community.
+		%experience-card.tool-tech-item
+			.summary Jenkins
+			%p
+				Jenkins is an open source continuous integration server. It's great
+				for getting fast feedback when committing changes to VCS and merging
+				branches.
 	%section.tool-tech-category
 		%h3 Frameworks and Libraries
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Ruby on Rails
-				%p
-					I've worked with Rails quite a bit at Astronautics, and have
-					first-hand experience in building a production grade application
-					in Rails from the ground up.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Sinatra
-				%p
-					I've had a little expereince with Sinatra in maintain a small test
-					application at Astronautics which runs on it. I admire its simplicity
-					and how easy it is to set up.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary RSpec
-				%p
-					My primary experience with RSpec is in writing unit tests for a
-					production-grade Rails application at Astronautics. I'm familiar
-					with both RSpec 2 and RSpec 3.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Cucumber
-				%p
-					I've used Cucumber to develop human-readable behavior-drivin
-					acceptance tests for a production-grade Rails application during
-					my time at Astronautics. I'm quite familiar with it's use.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary jQuery
-				%p
-					These days it's pretty hard to be involved in web development
-					without having used jQuery at least once. I'm fairly familiar
-					with it, having used it in both production-grade applications and
-					in several class projects.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Twitter Bootstrap
-				%p
-					Bootstrap is a CSS framework that comes with numerous ready-made
-					components and styles for use in web applications.
-				%p
-					I've used Twitter Bootstrap (both 2 and 3) to help me build a
-					production-grade Rails application during my time at Astronatics.
+		%experience-card.tool-tech-item
+			.summary Ruby on Rails
+			%p
+				I've worked with Rails quite a bit at Astronautics, and have
+				first-hand experience in building a production grade application
+				in Rails from the ground up.
+		%experience-card.tool-tech-item
+			.summary Sinatra
+			%p
+				I've had a little expereince with Sinatra in maintain a small test
+				application at Astronautics which runs on it. I admire its simplicity
+				and how easy it is to set up.
+		%experience-card.tool-tech-item
+			.summary RSpec
+			%p
+				My primary experience with RSpec is in writing unit tests for a
+				production-grade Rails application at Astronautics. I'm familiar
+				with both RSpec 2 and RSpec 3.
+		%experience-card.tool-tech-item
+			.summary Cucumber
+			%p
+				I've used Cucumber to develop human-readable behavior-drivin
+				acceptance tests for a production-grade Rails application during
+				my time at Astronautics. I'm quite familiar with it's use.
+		%experience-card.tool-tech-item
+			.summary jQuery
+			%p
+				These days it's pretty hard to be involved in web development
+				without having used jQuery at least once. I'm fairly familiar
+				with it, having used it in both production-grade applications and
+				in several class projects.
+		%experience-card.tool-tech-item
+			.summary Twitter Bootstrap
+			%p
+				Bootstrap is a CSS framework that comes with numerous ready-made
+				components and styles for use in web applications.
+			%p
+				I've used Twitter Bootstrap (both 2 and 3) to help me build a
+				production-grade Rails application during my time at Astronatics.
 	%section.tool-tech-category
 		%h3 General Technology-Related Tools
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Windows
-				%p
-					I've used Windows as my primary operating system for a long time now.
-					I'm quite familiar with it as a user.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Ubuntu
-				%p
-					I've used Ubuntu at work as my primary OS for web application
-					development. I'm familiar with both the front-end UI, and many
-					of the common behind-the-scenes tools and command line utilities
-					commonly used on Linux platforms.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Mac/OS X
-				%p
-					I have limited experience with OS X, but am confident in my ability
-					to perform both simple and complex tasks using it. (The main thing
-					I'm having trouble getting used to is the keyboard shortcuts. Muscle
-					memory is a hard thing to get over.)
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Microsoft Office - Word/Excel/PowerPoint/Outlook
-				%p
-					I'm very faimiliar with the standard MS Office products, and I'm
-					confident in my ablity to use them to their full potential.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Photoshop
-				%p
-					I'm no artist, but I have basic experience with editing and creating
-					graphics in Photoshop. It's usually overkill for most of the tasks I
-					do on an everyday basis, but I still have no trouble with them.
-		%paper-shadow.card.tool-tech-item
-			%details
-				%summary Computer Hardware
-				%p
-					I have some experience with computer hardware, having built my own PC
-					from scratch.
+		%experience-card.tool-tech-item
+			.summary Windows
+			%p
+				I've used Windows as my primary operating system for a long time now.
+				I'm quite familiar with it as a user.
+		%experience-card.tool-tech-item
+			.summary Ubuntu
+			%p
+				I've used Ubuntu at work as my primary OS for web application
+				development. I'm familiar with both the front-end UI, and many
+				of the common behind-the-scenes tools and command line utilities
+				commonly used on Linux platforms.
+		%experience-card.tool-tech-item
+			.summary Mac/OS X
+			%p
+				I have limited experience with OS X, but am confident in my ability
+				to perform both simple and complex tasks using it. (The main thing
+				I'm having trouble getting used to is the keyboard shortcuts. Muscle
+				memory is a hard thing to get over.)
+		%experience-card.tool-tech-item
+			.summary Microsoft Office - Word/Excel/PowerPoint/Outlook
+			%p
+				I'm very faimiliar with the standard MS Office products, and I'm
+				confident in my ablity to use them to their full potential.
+		%experience-card.tool-tech-item
+			.summary Photoshop
+			%p
+				I'm no artist, but I have basic experience with editing and creating
+				graphics in Photoshop. It's usually overkill for most of the tasks I
+				do on an everyday basis, but I still have no trouble with them.
+		%experience-card.tool-tech-item
+			.summary Computer Hardware
+			%p
+				I have some experience with computer hardware, having built my own PC
+				from scratch.
 %section#contact
 	%h2 Contact Information
 	%h3 Email
